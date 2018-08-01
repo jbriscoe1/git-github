@@ -19,7 +19,8 @@ For more details: https://www.youtube.com/watch?v=xuB1Id2Wxak
    - call "git add %filename%" or if there are multiple new files in red or modified files call "git add -A"; now all of these are added to the index and can be committed
    - check if they have been added to the index with "git status";  if they are green they were all indexed
    Commit 
-   - to commit all the files call "git commit -a -m "adding 3 files together"; "-m" must be in commmand line (if message window opens press i for insert, type message, press esc, enter :x!, hit enter) when committing pushing or pulling
+   - to commit all the files call "git commit -a -m "adding 3 files together"; "-m" must be in commmand line (if message window opens press i for insert, type message, press esc, enter :x!, hit enter) when committing pushing or pulling; if you have already indexed the file once you don't have to reindex and commit when something has been modified you can just "git commit -a -m" for the rest of the time 
+
 
 4. Parallel Development and Branching
    How  to create different branches (allows you to duplicate a git folder and files from the master and work on them without disrupting the original files)
@@ -27,8 +28,17 @@ For more details: https://www.youtube.com/watch?v=xuB1Id2Wxak
    - call "git checkout %branchname%"; switches into whatever branch name you call that you have created
    Files can now be added (from your local repo library) using "git add %filename%
    - call "ls"; shows a list of all the filenames in the branch you are in; if you "git checkout master" and "ls" they will not have any of the new files you have added to the other branch
+   if there is a feature that you are working on that you would like to pause and not commit to your master or branch codes you can call "git stash" to stash it away until you would like to add it back to the branch or master
+    
+   How to merge the new file back to your master branch (production quality code)
+    - call "git merge %branchname%"
+    
+   "git pull" = "git fetch" + "git merge"
    
-   
+   How to rebase - which cleans up all of the commit history 
+   -  git rebase %branchname to merge into master%
+  
+      
    
    
    
