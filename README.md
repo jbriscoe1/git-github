@@ -15,5 +15,12 @@ For more details: https://www.youtube.com/watch?v=xuB1Id2Wxak
    - call "git pull"; within you local repository folder there should be your ReadMe file from central
 3. Make Changes
    the midstep in the local git is called an Index. After a file (text file or piece of code)  is created in your synced local repository before it is committed back to the local or central repository it is held in this index. To see what files you have that are new but have not added to the index to be committed.
-   - call "git status"; these have not been added to the index before it can be committed
-   - call "git add %filename%"
+   - call "git status"; the files in red have not been added to the index before it can be committed
+   - call "git add %filename%" or if there are multiple new files in red or modified files call "git add -A"; now all of these are added to the index and can be committed
+   - check if they have been added to the index with "git status";  if they are green they were all indexed
+   Commit 
+   - to commit all the files call "git commit -a -m "adding 3 files together"; "-m" must be in commmand line (if message window opens press i for insert, type message, press esc, enter :x!, hit enter
+   
+   
+   
+   
